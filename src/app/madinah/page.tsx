@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     "24/7 taxi service in Madinah. Masjid Nabawi transfers, Ziyarat tours (Uhud, Quba, Badr), MED airport pickup. Taxi to Makkah SAR 380, Jeddah SAR 350. Book: +966573067785.",
   keywords:
     "taxi Madinah, Madinah taxi service, Masjid Nabawi taxi, Ziyarat taxi Madinah, taxi Madinah to Makkah, Madinah airport taxi, MED airport taxi",
+  alternates: { canonical: "/locations/madinah" },
 };
 
 const madinahFaqs: FaqItem[] = [

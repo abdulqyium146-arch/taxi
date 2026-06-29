@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     "Professional taxi service in Jeddah. KAIA airport transfers, Jeddah to Makkah SAR 120, Madinah SAR 350. 24/7. Fixed prices. Book: +966573067785.",
   keywords:
     "taxi Jeddah, Jeddah taxi service, airport taxi Jeddah, taxi Jeddah to Makkah, KAIA taxi, best taxi Jeddah",
+  alternates: { canonical: "/locations/jeddah" },
 };
 
 const jeddahFaqs: FaqItem[] = [

@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     "Taxi service to Badr — historic Battle of Badr site. Day trips from Madinah (155km, ~1.5 hrs, SAR 200 round trip) and Jeddah (310km). Professional Ziyarat transport. +966573067785.",
   keywords:
     "taxi to Badr, Badr Ziyarat taxi, taxi Madinah to Badr, Badr battlefield taxi, Battle of Badr visit, Badr day trip from Madinah, Ziyarat Badr Saudi Arabia",
+  alternates: { canonical: "/locations/badr" },
 };
 
 const badrFaqs: FaqItem[] = [

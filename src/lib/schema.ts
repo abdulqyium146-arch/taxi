@@ -312,7 +312,7 @@ export function buildLocationSchema(cityKey: keyof typeof CITIES) {
     "@type": "LocalBusiness",
     name: `Taxi Bhai – ${city.name} Taxi Service`,
     description: `Professional taxi service in ${city.name}, Saudi Arabia. Airport transfers, Umrah transport, Ziyarat tours, and intercity routes.`,
-    url: `${BUSINESS.website}/${cityKey}`,
+    url: `${BUSINESS.website}/locations/${cityKey}`,
     telephone: BUSINESS.phone,
     address: {
       "@type": "PostalAddress",
@@ -344,5 +344,108 @@ export function buildSpeakableSchema(cssSelectors: string[]) {
       cssSelector: cssSelectors,
     },
     url: BUSINESS.website,
+  };
+}
+
+export function buildArticleSchema({
+  title,
+  description,
+  slug,
+  datePublished,
+  dateModified,
+  authorName = "Taxi Bhai Team",
+  imageUrl,
+}: {
+  title: string;
+  description: string;
+  slug: string;
+  datePublished: string;
+  dateModified?: string;
+  authorName?: string;
+  imageUrl?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    url: `${BUSINESS.website}/blog/${slug}`,
+    datePublished,
+    dateModified: dateModified ?? datePublished,
+    author: {
+      "@type": "Person",
+      name: authorName,
+      url: BUSINESS.website,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: BUSINESS.name,
+      logo: {
+        "@type": "ImageObject",
+        url: `${BUSINESS.website}/images/taxi-bhai-logo.png`,
+      },
+    },
+    image: imageUrl
+      ? { "@type": "ImageObject", url: imageUrl }
+      : `${BUSINESS.website}/images/og-default.jpg`,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${BUSINESS.website}/blog/${slug}`,
+    },
+    inLanguage: "en-SA",
+    isPartOf: {
+      "@type": "Blog",
+      "@id": `${BUSINESS.website}/blog`,
+      name: "Taxi Bhai – Saudi Arabia Travel & Taxi Guide",
+    },
+  };
+}
+
+export function buildItemListSchema(
+  items: Array<{ name: string; url: string; description?: string }>,
+  listName: string
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: listName,
+    numberOfItems: items.length,
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      url: `${BUSINESS.website}${item.url}`,
+      description: item.description,
+    })),
+  };
+}
+
+export function buildWebPageSchema({
+  title,
+  description,
+  url,
+  breadcrumbs,
+}: {
+  title: string;
+  description: string;
+  url: string;
+  breadcrumbs?: Array<{ name: string; href: string }>;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${BUSINESS.website}${url}`,
+    url: `${BUSINESS.website}${url}`,
+    name: title,
+    description,
+    isPartOf: { "@id": `${BUSINESS.website}/#website` },
+    ...(breadcrumbs && {
+      breadcrumb: buildBreadcrumbSchema(breadcrumbs),
+    }),
+    inLanguage: "en-SA",
+    potentialAction: {
+      "@type": "ReadAction",
+      target: [`${BUSINESS.website}${url}`],
+    },
   };
 }

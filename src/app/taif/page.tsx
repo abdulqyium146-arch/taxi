@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     "Taxi service in Taif, Saudi Arabia. Rides from Taif to Makkah (SAR 130, 75km, ~1.5 hrs) and Jeddah (SAR 150, 90km). Al Shafa, Al Hada transfers. 24/7. Call +966573067785.",
   keywords:
     "taxi Taif, Taif taxi service, taxi Taif to Makkah, taxi Taif to Jeddah, Al Shafa taxi, Al Hada taxi, mountain taxi Taif Saudi Arabia",
+  alternates: { canonical: "/locations/taif" },
 };
 
 const taifFaqs: FaqItem[] = [

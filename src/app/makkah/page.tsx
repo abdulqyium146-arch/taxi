@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     "24/7 taxi service in Makkah, Saudi Arabia. Haram transfers, hotel pickups, Umrah transport, Ziyarat tours, and intercity taxi to Jeddah & Madinah. Call +966573067785.",
   keywords:
     "taxi Makkah, Makkah taxi service, Haram taxi, taxi near Haram Makkah, Makkah hotel taxi, Umrah taxi Makkah, taxi Makkah to Jeddah, taxi Makkah to Madinah",
+  alternates: { canonical: "/locations/makkah" },
 };
 
 const makkahFaqs: FaqItem[] = [

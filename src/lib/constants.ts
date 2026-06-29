@@ -7,7 +7,7 @@ export const BUSINESS = {
   phone: "+966573067785",
   whatsapp: "+966573067785",
   email: "taxibhai.sa@gmail.com",
-  website: "https://www.taxibhai.sa",
+  website: "https://taxibhaisauditaxiservice.com",
   founded: "2019",
   country: "SA",
   currency: "SAR",
@@ -33,6 +33,14 @@ export const BUSINESS = {
   openingHours: "Mo-Su 00:00-24:00",
 } as const;
 
+export const WHATSAPP_CATALOG = {
+  airportTransfer: "https://wa.me/p/23957774393831986/269874890809567",
+  umrahTaxi:       "https://wa.me/p/9925568250886108/269874890809567",
+  ziyaratTaxi:     "https://wa.me/p/30950141154599884/269874890809567",
+  intercityTaxi:   "https://wa.me/p/25001226919465169/269874890809567",
+  default:         "https://wa.me/966573067785?text=Hi%20Taxi%20Bhai%2C%20I%20want%20to%20book%20a%20taxi.",
+} as const;
+
 export const ROUTES = {
   home: "/",
   services: {
@@ -46,12 +54,13 @@ export const ROUTES = {
     cityToCity: "/services/city-to-city",
   },
   locations: {
-    jeddah: "/jeddah",
-    makkah: "/makkah",
-    madinah: "/madinah",
-    taif: "/taif",
-    badr: "/badr",
+    jeddah: "/locations/jeddah",
+    makkah: "/locations/makkah",
+    madinah: "/locations/madinah",
+    taif: "/locations/taif",
+    badr: "/locations/badr",
   },
+  blog: "/blog",
   static: {
     about: "/about",
     contact: "/contact",
@@ -325,6 +334,49 @@ export const INTERCITY_ROUTES = [
     priceRange: { economy: 150, vip: 250 },
     description:
       "Descent from Taif highlands to Jeddah via the scenic Taif-Jeddah Expressway.",
+  },
+  // ── Airport-specific routes ──────────────────────────────────────────────
+  {
+    from: "jeddah",
+    to: "makkah",
+    fromName: "Jeddah Airport (KAIA)",
+    toName: "Makkah",
+    slug: "jeddah-airport-to-makkah",
+    distance: 80,
+    duration: "1 hour",
+    durationMinutes: 60,
+    highway: "Jeddah–Makkah Expressway (Route 40)",
+    priceRange: { economy: 120, vip: 200 },
+    description:
+      "Direct airport taxi from King Abdulaziz International Airport (KAIA) to Makkah hotels and Masjid al-Haram. Flight tracking included, driver waits at arrivals.",
+  },
+  {
+    from: "jeddah",
+    to: "madinah",
+    fromName: "Jeddah Airport (KAIA)",
+    toName: "Madinah",
+    slug: "jeddah-airport-to-madinah",
+    distance: 420,
+    duration: "4–4.5 hours",
+    durationMinutes: 255,
+    highway: "Route 60 (Jeddah-Madinah Highway)",
+    priceRange: { economy: 350, vip: 550 },
+    description:
+      "Airport taxi from KAIA Jeddah directly to Madinah hotels and Masjid Nabawi area. Ideal for Umrah pilgrims arriving in Jeddah and heading to Madinah first.",
+  },
+  {
+    from: "makkah",
+    to: "jeddah",
+    fromName: "Makkah Haram",
+    toName: "Jeddah Airport (KAIA)",
+    slug: "haram-to-airport",
+    distance: 80,
+    duration: "1 hour",
+    durationMinutes: 60,
+    highway: "Jeddah–Makkah Expressway (Route 40)",
+    priceRange: { economy: 120, vip: 200 },
+    description:
+      "Transfer from Masjid al-Haram and Makkah hotels directly to Jeddah International Airport (KAIA). On-time departure guarantee for flight connections after Umrah.",
   },
 ] as const;
 
