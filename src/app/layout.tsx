@@ -71,6 +71,9 @@ export const metadata: Metadata = {
       "ar-SA": `${BUSINESS.website}/ar`,
     },
   },
+  verification: {
+    google: "A81l6RkGUBvptqnH-uBO05dkXR4e0rk7Jyrr8qaGSoM",
+  },
   other: {
     "geo.region": "SA-02",
     "geo.placename": "Jeddah, Saudi Arabia",
