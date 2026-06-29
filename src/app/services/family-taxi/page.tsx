@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import { Breadcrumb } from "@/components/seo/Breadcrumb";
 import { FAQSection } from "@/components/sections/FAQSection";
+import { RelatedContent } from "@/components/sections/RelatedContent";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { buildServiceSchema } from "@/lib/schema";
 import { BUSINESS } from "@/lib/constants";
+import { getRelatedContent } from "@/lib/relatedContent";
 import { Users, CheckCircle, MessageCircle, Phone, Shield } from "lucide-react";
 import type { FaqItem } from "@/lib/types";
+
+const related = getRelatedContent("/services/family-taxi");
 
 export const metadata: Metadata = {
   title: "Family Taxi Saudi Arabia – Spacious Vans & Group Transport",
@@ -106,6 +110,14 @@ export default function FamilyTaxiPage() {
         </div>
       </div>
       <FAQSection faqs={familyFaqs} title="Family Taxi FAQ" subtitle="Questions about family and group taxi service in Saudi Arabia." />
+      <RelatedContent
+        services={related.services}
+        cities={related.cities}
+        routes={related.routes}
+        blogs={related.blogs}
+        faqs={related.faqs}
+        heading="Related Family & Group Travel Services"
+      />
     </>
   );
 }

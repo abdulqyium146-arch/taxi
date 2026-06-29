@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
 import { Breadcrumb } from "@/components/seo/Breadcrumb";
+import { RelatedContent } from "@/components/sections/RelatedContent";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { buildFaqSchema } from "@/lib/schema";
 import { GLOBAL_FAQS, AIRPORT_FAQS, UMRAH_FAQS, ZIYARAT_FAQS, INTERCITY_FAQS } from "@/lib/faqs";
 import { BUSINESS } from "@/lib/constants";
+import { getRelatedContent } from "@/lib/relatedContent";
 import { MessageCircle, Phone } from "lucide-react";
+
+const related = getRelatedContent("/faq");
 
 export const metadata: Metadata = {
   title: "FAQ – Taxi Bhai Saudi Arabia | Common Questions Answered",
@@ -72,6 +76,12 @@ export default function FaqPage() {
           </div>
         </div>
       </div>
+      <RelatedContent
+        services={related.services}
+        routes={related.routes}
+        cities={related.cities}
+        heading="Explore Our Services"
+      />
     </>
   );
 }

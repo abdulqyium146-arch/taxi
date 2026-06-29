@@ -3,9 +3,11 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Breadcrumb } from "@/components/seo/Breadcrumb";
 import { FAQSection } from "@/components/sections/FAQSection";
+import { RelatedContent } from "@/components/sections/RelatedContent";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { buildLocationSchema } from "@/lib/schema";
 import { BUSINESS, CITIES, INTERCITY_ROUTES } from "@/lib/constants";
+import { getRelatedContent } from "@/lib/relatedContent";
 import { MapPin, Clock, ArrowRight, MessageCircle, Phone, Plane } from "lucide-react";
 import type { FaqItem } from "@/lib/types";
 
@@ -269,6 +271,8 @@ export default async function LocationPage({
     (r) => (r.from as string) === city || (r.to as string) === city
   );
 
+  const related = getRelatedContent(`/locations/${city}`);
+
   const HERO_GRADIENTS: Record<string, string> = {
     makkah: "linear-gradient(135deg, #1a0a00 0%, #3d1a00 50%, #5c2800 100%)",
     madinah: "linear-gradient(135deg, #0a1628 0%, #0c2340 50%, #1e3a5f 100%)",
@@ -494,6 +498,14 @@ export default async function LocationPage({
       </div>
 
       <FAQSection faqs={cfg.faqs} title={cfg.faqTitle} subtitle={cfg.faqSub} />
+      <RelatedContent
+        services={related.services}
+        routes={related.routes}
+        cities={related.cities}
+        blogs={related.blogs}
+        nearbyLocations={related.nearbyLocations}
+        heading={`Taxi Services in ${cityData.name}`}
+      />
     </>
   );
 }

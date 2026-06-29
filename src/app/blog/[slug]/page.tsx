@@ -2,10 +2,12 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Breadcrumb } from "@/components/seo/Breadcrumb";
+import { RelatedContent } from "@/components/sections/RelatedContent";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { buildArticleSchema } from "@/lib/schema";
 import { BLOG_POSTS, getBlogPost } from "@/lib/blog";
 import { BUSINESS } from "@/lib/constants";
+import { getRelatedContent } from "@/lib/relatedContent";
 import { Clock, Calendar, ArrowLeft, MessageCircle } from "lucide-react";
 
 interface BlogPostPageProps {
@@ -71,6 +73,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const related = BLOG_POSTS.filter(
     (p) => p.slug !== slug && p.category === post.category
   ).slice(0, 2);
+
+  const relatedLinks = getRelatedContent(`/blog/${slug}`);
 
   return (
     <>
@@ -190,6 +194,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </Link>
         </div>
       </div>
+      <RelatedContent
+        services={relatedLinks.services}
+        routes={relatedLinks.routes}
+        cities={relatedLinks.cities}
+        blogs={relatedLinks.blogs}
+        heading="Related Services & Routes"
+      />
     </>
   );
 }

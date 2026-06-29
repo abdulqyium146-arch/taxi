@@ -3,9 +3,11 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Breadcrumb } from "@/components/seo/Breadcrumb";
 import { FAQSection } from "@/components/sections/FAQSection";
+import { RelatedContent } from "@/components/sections/RelatedContent";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { buildRouteSchema, buildFaqSchema } from "@/lib/schema";
 import { INTERCITY_ROUTES, BUSINESS } from "@/lib/constants";
+import { getRelatedContent } from "@/lib/relatedContent";
 import { MapPin, Clock, DollarSign, Navigation, CheckCircle, MessageCircle, Phone, ArrowRight } from "lucide-react";
 import type { FaqItem } from "@/lib/types";
 
@@ -66,6 +68,8 @@ export default async function RouteDetailPage({ params }: RoutePageProps) {
   const relatedRoutes = INTERCITY_ROUTES.filter(
     (r) => r.slug !== route && (r.from === routeData.from || r.to === routeData.to || r.from === routeData.to || r.to === routeData.from)
   ).slice(0, 4);
+
+  const related = getRelatedContent(`/taxi-${route}`);
 
   return (
     <>
@@ -307,6 +311,13 @@ export default async function RouteDetailPage({ params }: RoutePageProps) {
         faqs={faqs}
         title={`${routeData.fromName} to ${routeData.toName} Taxi FAQ`}
         subtitle={`Common questions about the ${routeData.fromName}–${routeData.toName} taxi route.`}
+      />
+      <RelatedContent
+        services={related.services}
+        routes={related.routes}
+        cities={related.cities}
+        blogs={related.blogs}
+        heading={`More Taxi Routes from ${routeData.fromName}`}
       />
     </>
   );

@@ -7,6 +7,7 @@ import { HowItWorks } from "@/components/sections/HowItWorks";
 import { CoverageAreas } from "@/components/sections/CoverageAreas";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { FAQSection } from "@/components/sections/FAQSection";
+import { InternalLinkGrid } from "@/components/sections/InternalLinkGrid";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { buildReviewSchema, buildSpeakableSchema } from "@/lib/schema";
 import { GLOBAL_FAQS } from "@/lib/faqs";
@@ -193,6 +194,8 @@ export default function HomePage() {
         title="Frequently Asked Questions About Taxi Bhai"
         subtitle="Common questions from passengers about booking, pricing, routes, and services."
       />
+
+      <InternalLinkGrid variant="home" />
 
       <section
         className="py-16"

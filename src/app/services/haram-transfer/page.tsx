@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import { Breadcrumb } from "@/components/seo/Breadcrumb";
 import { FAQSection } from "@/components/sections/FAQSection";
+import { RelatedContent } from "@/components/sections/RelatedContent";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { buildServiceSchema } from "@/lib/schema";
 import { BUSINESS } from "@/lib/constants";
+import { getRelatedContent } from "@/lib/relatedContent";
 import { Home, Clock, MessageCircle, Phone } from "lucide-react";
 import type { FaqItem } from "@/lib/types";
+
+const related = getRelatedContent("/services/haram-transfer");
 
 export const metadata: Metadata = {
   title: "Haram Transfer Service – Makkah & Madinah Hotel to Mosque Shuttle",
@@ -130,6 +134,14 @@ export default function HaramTransferPage() {
         </div>
       </div>
       <FAQSection faqs={haramFaqs} title="Haram Transfer FAQ" subtitle="Questions about hotel-to-Haram taxi service in Makkah and Madinah." />
+      <RelatedContent
+        services={related.services}
+        cities={related.cities}
+        routes={related.routes}
+        blogs={related.blogs}
+        faqs={related.faqs}
+        heading="Related Haram & Pilgrimage Services"
+      />
     </>
   );
 }

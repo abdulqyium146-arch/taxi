@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import { Breadcrumb } from "@/components/seo/Breadcrumb";
 import { FAQSection } from "@/components/sections/FAQSection";
+import { RelatedContent } from "@/components/sections/RelatedContent";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { buildServiceSchema } from "@/lib/schema";
 import { BUSINESS } from "@/lib/constants";
+import { getRelatedContent } from "@/lib/relatedContent";
 import { Crown, CheckCircle, MessageCircle, Phone, Star } from "lucide-react";
 import type { FaqItem } from "@/lib/types";
+
+const related = getRelatedContent("/services/vip-taxi");
 
 export const metadata: Metadata = {
   title: "VIP Taxi Saudi Arabia – Luxury Chauffeur Service Jeddah, Makkah, Madinah",
@@ -126,6 +130,14 @@ export default function VipTaxiPage() {
         </div>
       </div>
       <FAQSection faqs={vipFaqs} title="VIP Taxi FAQ" subtitle="Questions about Taxi Bhai's luxury chauffeur service." />
+      <RelatedContent
+        services={related.services}
+        cities={related.cities}
+        routes={related.routes}
+        blogs={related.blogs}
+        faqs={related.faqs}
+        heading="Related Premium Transport Services"
+      />
     </>
   );
 }

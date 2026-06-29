@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import { Breadcrumb } from "@/components/seo/Breadcrumb";
 import { FAQSection } from "@/components/sections/FAQSection";
+import { RelatedContent } from "@/components/sections/RelatedContent";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { buildServiceSchema } from "@/lib/schema";
 import { AIRPORT_FAQS } from "@/lib/faqs";
 import { BUSINESS } from "@/lib/constants";
+import { getRelatedContent } from "@/lib/relatedContent";
 import { Plane, Clock, Shield, Navigation, CheckCircle, MessageCircle, Phone, MapPin } from "lucide-react";
+
+const related = getRelatedContent("/services/airport-transfer");
 
 export const metadata: Metadata = {
   title: "Jeddah Airport Taxi & Transfer Service – KAIA Terminal 1, 2 & 3",
@@ -257,6 +261,14 @@ export default function AirportTransferPage() {
         faqs={AIRPORT_FAQS}
         title="Jeddah Airport Taxi FAQ"
         subtitle="Common questions about Taxi Bhai's airport transfer service."
+      />
+      <RelatedContent
+        services={related.services}
+        cities={related.cities}
+        routes={related.routes}
+        blogs={related.blogs}
+        faqs={related.faqs}
+        heading="Related Airport Transfer Services"
       />
     </>
   );

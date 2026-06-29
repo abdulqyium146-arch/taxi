@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import { Breadcrumb } from "@/components/seo/Breadcrumb";
 import { FAQSection } from "@/components/sections/FAQSection";
+import { RelatedContent } from "@/components/sections/RelatedContent";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { buildServiceSchema } from "@/lib/schema";
 import { UMRAH_FAQS } from "@/lib/faqs";
 import { BUSINESS } from "@/lib/constants";
+import { getRelatedContent } from "@/lib/relatedContent";
 import { Moon, Clock, CheckCircle, MessageCircle, Phone, Star } from "lucide-react";
+
+const related = getRelatedContent("/services/umrah-taxi");
 
 export const metadata: Metadata = {
   title: "Umrah Taxi Service Saudi Arabia – Airport to Haram Packages",
@@ -304,6 +308,14 @@ export default function UmrahTaxiPage() {
         faqs={UMRAH_FAQS}
         title="Umrah Taxi FAQ"
         subtitle="Common questions about Taxi Bhai's Umrah transport service."
+      />
+      <RelatedContent
+        services={related.services}
+        cities={related.cities}
+        routes={related.routes}
+        blogs={related.blogs}
+        faqs={related.faqs}
+        heading="Related Umrah Transport Services"
       />
     </>
   );

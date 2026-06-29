@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import { Breadcrumb } from "@/components/seo/Breadcrumb";
 import { FAQSection } from "@/components/sections/FAQSection";
+import { RelatedContent } from "@/components/sections/RelatedContent";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { buildServiceSchema } from "@/lib/schema";
 import { ZIYARAT_FAQS } from "@/lib/faqs";
 import { BUSINESS } from "@/lib/constants";
+import { getRelatedContent } from "@/lib/relatedContent";
 import { Landmark, Clock, MapPin, MessageCircle, Phone } from "lucide-react";
+
+const related = getRelatedContent("/services/ziyarat-taxi");
 
 export const metadata: Metadata = {
   title: "Ziyarat Taxi Service – Madinah & Makkah Islamic Site Tours",
@@ -265,6 +269,14 @@ export default function ZiyaratTaxiPage() {
         faqs={ZIYARAT_FAQS}
         title="Ziyarat Taxi FAQ"
         subtitle="Questions about Islamic site visits and Ziyarat tours in Saudi Arabia."
+      />
+      <RelatedContent
+        services={related.services}
+        cities={related.cities}
+        routes={related.routes}
+        blogs={related.blogs}
+        faqs={related.faqs}
+        heading="Related Ziyarat & Tour Services"
       />
     </>
   );

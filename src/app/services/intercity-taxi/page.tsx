@@ -2,11 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumb } from "@/components/seo/Breadcrumb";
 import { FAQSection } from "@/components/sections/FAQSection";
+import { RelatedContent } from "@/components/sections/RelatedContent";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { buildServiceSchema } from "@/lib/schema";
 import { INTERCITY_FAQS } from "@/lib/faqs";
 import { BUSINESS, INTERCITY_ROUTES } from "@/lib/constants";
+import { getRelatedContent } from "@/lib/relatedContent";
 import { MapPin, Clock, DollarSign, MessageCircle, Phone, ArrowRight } from "lucide-react";
+
+const related = getRelatedContent("/services/intercity-taxi");
 
 export const metadata: Metadata = {
   title: "Saudi Intercity Taxi Service – Fixed Price City-to-City Routes",
@@ -197,6 +201,14 @@ export default function IntercityTaxiPage() {
         faqs={INTERCITY_FAQS}
         title="Intercity Taxi FAQ"
         subtitle="Questions about Saudi Arabia intercity taxi routes, pricing, and booking."
+      />
+      <RelatedContent
+        services={related.services}
+        cities={related.cities}
+        routes={related.routes}
+        blogs={related.blogs}
+        faqs={related.faqs}
+        heading="Related Intercity Routes & Services"
       />
     </>
   );
