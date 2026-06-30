@@ -669,6 +669,21 @@ export const STATIC_LINKS: SiteLink[] = [
     ],
     description: "All 5 cities covered by Taxi Bhai",
   },
+  {
+    url: "/services",
+    label: "All Services",
+    title: "Taxi Bhai Services – Airport Transfer, Umrah Taxi & More",
+    pageType: "hub",
+    depth: 1,
+    entityId: "taxi-bhai",
+    anchorVariants: [
+      "All Services",
+      "Taxi Bhai services",
+      "Saudi taxi services",
+      "what we offer",
+    ],
+    description: "Complete list of all 7 Taxi Bhai services",
+  },
 ];
 
 // ── Flat master list ──────────────────────────────────────────────────────

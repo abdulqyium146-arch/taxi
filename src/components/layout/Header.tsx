@@ -22,7 +22,7 @@ const navItems = [
   },
   {
     label: "Cities",
-    href: "/cities",
+    href: "/locations",
     children: [
       { label: "Jeddah Taxi", href: ROUTES.locations.jeddah },
       { label: "Makkah Taxi", href: ROUTES.locations.makkah },
@@ -33,7 +33,7 @@ const navItems = [
   },
   {
     label: "Routes",
-    href: "/routes",
+    href: "/services/intercity-taxi",
     children: [
       { label: "Jeddah → Makkah", href: "/taxi-jeddah-to-makkah" },
       { label: "Jeddah → Madinah", href: "/taxi-jeddah-to-madinah" },
