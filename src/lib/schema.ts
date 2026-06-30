@@ -15,12 +15,12 @@ export function buildLocalBusinessSchema() {
     paymentAccepted: "Cash, Credit Card, Bank Transfer",
     priceRange: "$$",
     openingHours: BUSINESS.openingHours,
-    image: `${BUSINESS.website}/images/taxi-bhai-logo.png`,
+    image: `${BUSINESS.website}/logo.webp`,
     logo: {
       "@type": "ImageObject",
-      url: `${BUSINESS.website}/images/taxi-bhai-logo.png`,
-      width: 400,
-      height: 400,
+      url: `${BUSINESS.website}/logo.webp`,
+      width: 1024,
+      height: 1024,
     },
     address: {
       "@type": "PostalAddress",
@@ -382,7 +382,7 @@ export function buildArticleSchema({
       name: BUSINESS.name,
       logo: {
         "@type": "ImageObject",
-        url: `${BUSINESS.website}/images/taxi-bhai-logo.png`,
+        url: `${BUSINESS.website}/logo.webp`,
       },
     },
     image: imageUrl

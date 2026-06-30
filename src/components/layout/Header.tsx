@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { Phone, Menu, X, ChevronDown } from "lucide-react";
 import { BUSINESS, ROUTES } from "@/lib/constants";
@@ -56,11 +57,14 @@ export function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 flex-shrink-0">
-            <div className="w-9 h-9 rounded-lg bg-green-700 flex items-center justify-center flex-shrink-0">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
-                <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z" />
-              </svg>
-            </div>
+            <Image
+              src="/logo.webp"
+              alt="Taxi Bhai Logo"
+              width={36}
+              height={36}
+              className="rounded-lg"
+              priority
+            />
             <div>
               <span className="font-bold text-lg text-gray-900 leading-tight">Taxi Bhai</span>
               <p className="text-[10px] text-green-700 font-medium leading-tight hidden sm:block">Saudi Arabia</p>
