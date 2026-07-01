@@ -12,11 +12,11 @@ import { Landmark, Clock, MapPin, MessageCircle, Phone } from "lucide-react";
 const related = getRelatedContent("/services/ziyarat-taxi");
 
 export const metadata: Metadata = {
-  title: "Ziyarat Taxi Service – Madinah & Makkah Islamic Site Tours",
+  title: "Ziyarat Taxi Tours – Islamic Site Private Cab | Madinah & Makkah",
   description:
-    "Professional Ziyarat taxi tours in Madinah and Makkah. Visit Masjid Nabawi, Mount Uhud, Masjid Quba, Al-Baqi, Badr (155km), and all major Islamic sites. Fixed prices. Book: +966573067785.",
+    "Private cab for Ziyarat Islamic site tours in Madinah and Makkah. Tour service covering Masjid Nabawi, Mount Uhud, Masjid Quba, Al-Baqi, Badr (155km). Full-day & half-day. Book: +966573067785.",
   keywords:
-    "Ziyarat taxi Madinah, Ziyarat taxi Makkah, Islamic sites tour Saudi Arabia, Madinah historical places taxi, Badr taxi from Madinah, Uhud taxi tour, taxi for Ziyarat Saudi",
+    "Ziyarat taxi Madinah, Ziyarat tour service, Islamic site tour taxi, private cab Madinah, tour agency Saudi Arabia, Badr taxi from Madinah, Uhud taxi tour, taxi for Ziyarat Saudi, Madinah Ziyarat cab, Makkah tour taxi",
 };
 
 const madinahSites = [

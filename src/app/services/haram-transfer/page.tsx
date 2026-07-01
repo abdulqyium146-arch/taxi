@@ -12,11 +12,11 @@ import type { FaqItem } from "@/lib/types";
 const related = getRelatedContent("/services/haram-transfer");
 
 export const metadata: Metadata = {
-  title: "Haram Transfer Service – Makkah & Madinah Hotel to Mosque Shuttle",
+  title: "Haram Transfer – Hotel to Masjid al-Haram Cab Service | Makkah & Madinah",
   description:
-    "Dedicated hotel-to-Haram shuttle service in Makkah and Madinah. Available for all prayer times including Fajr and Tahajjud. From SAR 30 per trip. Book: +966573067785.",
+    "24/7 local taxi cab service hotel to Masjid al-Haram (Makkah) and Masjid Nabawi (Madinah). All prayer times covered including Fajr & Tahajjud. From SAR 25/trip. Book: +966573067785.",
   keywords:
-    "Haram transfer Makkah, hotel to Haram taxi, taxi near Masjid al-Haram, Masjid Nabawi transfer, hotel shuttle Makkah, Haram taxi service, taxi near Haram",
+    "local taxi Makkah, cab near Haram, taxi near me Makkah, Haram transfer service, hotel to Haram taxi, taxi near Masjid al-Haram, Masjid Nabawi transfer, Haram cab service, local cab Madinah, local taxi near me Makkah",
 };
 
 const haramFaqs: FaqItem[] = [

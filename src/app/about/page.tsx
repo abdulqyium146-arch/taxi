@@ -6,11 +6,11 @@ import { BUSINESS } from "@/lib/constants";
 import { Shield, Clock, Star, Users, MapPin, MessageCircle, Phone } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About Taxi Bhai – Saudi Arabia's Professional Taxi Service Since 2019",
+  title: "About Taxi Bhai – Transport Company & Cab Service Saudi Arabia Since 2019",
   description:
-    "Learn about Taxi Bhai — Saudi Arabia's trusted taxi service founded in 2019. Licensed drivers, fixed prices, 24/7 availability. Serving pilgrims and residents across Jeddah, Makkah, Madinah, Taif & Badr.",
+    "Taxi Bhai is a professional transport company and cab service in Saudi Arabia, founded in 2019. Licensed drivers, fixed prices, 24/7 taxi booking across Jeddah, Makkah, Madinah, Taif & Badr. Call +966573067785.",
   keywords:
-    "about Taxi Bhai, Saudi Arabia taxi company, professional taxi Saudi, who is Taxi Bhai, Taxi Bhai Jeddah",
+    "transport company Saudi Arabia, cab service company, taxi company Saudi Arabia, transport company near me Jeddah, transport service Saudi Arabia, professional taxi company, taxi firm Saudi Arabia, about Taxi Bhai, Taxi Bhai Jeddah",
 };
 
 const milestones = [

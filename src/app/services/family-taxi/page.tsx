@@ -12,11 +12,11 @@ import type { FaqItem } from "@/lib/types";
 const related = getRelatedContent("/services/family-taxi");
 
 export const metadata: Metadata = {
-  title: "Family Taxi Saudi Arabia – Spacious Vans & Group Transport",
+  title: "Family Taxi & Maxi Cab Saudi Arabia – 7-Seater Taxi Van Hire",
   description:
-    "Family-safe taxi service in Saudi Arabia. Spacious minivans for groups up to 7, child seats available, female-friendly options. Umrah family packages. Book: +966573067785.",
+    "Family-friendly maxi cab and taxi van service in Saudi Arabia for groups up to 7. Child seats, female-friendly options, Umrah family packages. Book a spacious cab: +966573067785.",
   keywords:
-    "family taxi Saudi Arabia, group taxi Jeddah, minivan taxi Makkah, family transport Umrah, child seat taxi Saudi Arabia, safe family taxi Saudi, female friendly taxi Saudi Arabia",
+    "family taxi Saudi Arabia, maxi cab Saudi Arabia, taxi van Saudi Arabia, 7 seater taxi, group taxi Jeddah, minivan taxi Makkah, family transport Umrah, child seat taxi Saudi Arabia, female friendly taxi Saudi Arabia, cab for large group",
 };
 
 const familyFaqs: FaqItem[] = [

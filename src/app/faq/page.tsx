@@ -11,11 +11,11 @@ import { MessageCircle, Phone } from "lucide-react";
 const related = getRelatedContent("/faq");
 
 export const metadata: Metadata = {
-  title: "FAQ – Taxi Bhai Saudi Arabia | Common Questions Answered",
+  title: "Taxi FAQ – Book a Cab Near Me in Saudi Arabia | Taxi Bhai",
   description:
-    "Frequently asked questions about Taxi Bhai Saudi Arabia. Booking, pricing, airport transfers, Umrah taxi, Ziyarat tours, intercity routes, and more. Call +966573067785.",
+    "Answers to common questions: taxi near me Saudi Arabia, airport taxi booking, long distance cab prices, 24/7 cab service, Umrah transport, outstation taxi. WhatsApp or call +966573067785.",
   keywords:
-    "Taxi Bhai FAQ, Saudi taxi questions, how to book taxi Saudi Arabia, taxi price Saudi Arabia, Umrah taxi FAQ, Jeddah airport taxi FAQ",
+    "taxi near me FAQ, cab booking Saudi Arabia, taxi prices Saudi Arabia, airport taxi questions, long distance taxi FAQ, 24 hour taxi near me, taxi service near me, how to book taxi Saudi Arabia, taxi phone number Saudi Arabia",
 };
 
 const allFaqSections = [

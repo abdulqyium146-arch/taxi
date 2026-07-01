@@ -2,14 +2,24 @@ import type { FaqItem } from "./types";
 
 export const GLOBAL_FAQS: FaqItem[] = [
   {
+    question: "How do I book a taxi near me in Saudi Arabia?",
+    answer:
+      "To book a taxi near you in Saudi Arabia, call or WhatsApp Taxi Bhai at +966573067785. Share your city (Jeddah, Makkah, Madinah, Taif, or Badr), pickup location, destination, and travel time. We confirm within minutes and dispatch a driver to your exact location.",
+  },
+  {
+    question: "Is there a 24-hour taxi service near me in Saudi Arabia?",
+    answer:
+      "Yes. Taxi Bhai operates a 24-hour taxi service across Saudi Arabia, available every day including Ramadan, Hajj season, and public holidays. Whether you need an early Fajr pickup or a late-night airport transfer, our drivers are always on call. Reach us 24/7 at +966573067785.",
+  },
+  {
     question: "How do I book a Taxi Bhai taxi in Saudi Arabia?",
     answer:
       "Booking is simple: call or WhatsApp us at +966573067785 with your pickup location, destination, and travel date. We confirm your booking within minutes and send driver details 1 hour before pickup.",
   },
   {
-    question: "Does Taxi Bhai operate 24/7?",
+    question: "What is Taxi Bhai's taxi phone number?",
     answer:
-      "Yes. Taxi Bhai operates 24 hours a day, 7 days a week, 365 days a year — including Ramadan, Hajj season, and public holidays. Our dispatch team is always available.",
+      "Taxi Bhai's taxi phone number is +966573067785. You can call or WhatsApp this number 24/7 to book a cab, ask about prices, or get help with your booking. We respond within minutes.",
   },
   {
     question: "What is the taxi fare from Jeddah Airport to Makkah?",
@@ -51,9 +61,39 @@ export const GLOBAL_FAQS: FaqItem[] = [
     answer:
       "King Abdulaziz International Airport (KAIA) in Jeddah is approximately 80km from the center of Makkah. The drive takes about 60 minutes via the Jeddah-Makkah Expressway.",
   },
+  {
+    question: "Is Taxi Bhai cheaper than Careem or Uber in Saudi Arabia?",
+    answer:
+      "For pre-booked intercity and airport journeys, Taxi Bhai is often more cost-effective than Careem, Uber, Bolt, or Yango — especially during peak Umrah, Hajj, and Ramadan seasons when ride-app surge pricing can triple normal fares. Taxi Bhai uses fixed prices agreed before travel, so you never pay more than quoted regardless of time or demand.",
+  },
+  {
+    question: "Can I hire a taxi with a private driver in Saudi Arabia?",
+    answer:
+      "Yes. Taxi Bhai offers private hire with a dedicated driver for half-day, full-day, or multi-day assignments. This service is popular for Ziyarat tours, Umrah pilgrimages, airport runs, and corporate travel. WhatsApp us at +966573067785 with your itinerary for a custom quote.",
+  },
+  {
+    question: "How do I book a taxi near me in Makkah or Madinah?",
+    answer:
+      "To book a local taxi in Makkah or Madinah, WhatsApp or call Taxi Bhai at +966573067785. We have drivers stationed in both cities and can typically dispatch within 30–60 minutes. We cover hotel-to-Haram runs, Ziyarat tours, and intercity transfers from both holy cities.",
+  },
+  {
+    question: "What is the cheapest taxi service near me in Saudi Arabia?",
+    answer:
+      "Taxi Bhai offers competitive fixed fares with no hidden charges — from SAR 25 for a Haram shuttle to SAR 120 for an airport-to-Makkah transfer. For budget travelers, our shared taxi option (per-seat pricing) on routes like Jeddah–Makkah starts from SAR 30 per person. Contact us for a quote specific to your route.",
+  },
 ];
 
 export const AIRPORT_FAQS: FaqItem[] = [
+  {
+    question: "How do I pre-book an airport taxi in Saudi Arabia?",
+    answer:
+      "To pre-book an airport taxi, WhatsApp or call Taxi Bhai at +966573067785 at least 12 hours before your flight lands. Share your flight number, arrival terminal, and destination. We track your flight in real-time and adjust pickup time if delayed — no rebooking needed.",
+  },
+  {
+    question: "What is the cheapest airport taxi from Jeddah Airport?",
+    answer:
+      "The cheapest fixed-price airport taxi from King Abdulaziz International Airport (KAIA) starts at SAR 60 to Jeddah city, SAR 120 to Makkah, and SAR 350 to Madinah. These are economy sedan prices per vehicle. No surge pricing — ever. Call +966573067785 to confirm your fare before travel.",
+  },
   {
     question: "Which terminal does Taxi Bhai pick up from at Jeddah Airport?",
     answer:
@@ -113,6 +153,16 @@ export const ZIYARAT_FAQS: FaqItem[] = [
 ];
 
 export const INTERCITY_FAQS: FaqItem[] = [
+  {
+    question: "What is the best long distance taxi service in Saudi Arabia?",
+    answer:
+      "Taxi Bhai is one of Saudi Arabia's most trusted long distance taxi services for the western region (Jeddah, Makkah, Madinah, Taif, Badr). We offer fixed-price outstation cab bookings, professional licensed drivers, and 24/7 availability. Book by calling or WhatsApping +966573067785.",
+  },
+  {
+    question: "Can I book a one-way outstation cab in Saudi Arabia?",
+    answer:
+      "Yes. All Taxi Bhai intercity routes are available as one-way cab bookings — you only pay for the direction you need. Popular one-way routes include Jeddah to Makkah (SAR 120), Makkah to Madinah (SAR 250), and Madinah to Jeddah (SAR 350). Return bookings also available at a discount.",
+  },
   {
     question: "What is the cheapest way to travel from Jeddah to Madinah?",
     answer:

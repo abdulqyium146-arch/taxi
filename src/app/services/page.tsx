@@ -7,11 +7,11 @@ import { ROUTES } from "@/lib/constants";
 import { Plane, Moon, Landmark, Home, Users, Crown, MapPin, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Taxi Bhai Services – Airport Transfer, Umrah Taxi, Ziyarat & More",
+  title: "All Taxi Services – Airport Cab, Long Distance Taxi & Transport Saudi Arabia",
   description:
-    "All Taxi Bhai services in Saudi Arabia: airport transfers from KAIA Jeddah, Umrah taxi packages, Ziyarat tours, Haram shuttle, VIP chauffeur, family taxi, and intercity routes. Book 24/7.",
+    "Complete taxi and transport services in Saudi Arabia: airport cab, long distance taxi, Umrah transport, Ziyarat tours, VIP chauffeur, family taxi van, Haram shuttle. 24/7 cab booking. Call +966573067785.",
   keywords:
-    "taxi services Saudi Arabia, airport taxi Jeddah, Umrah taxi service, Ziyarat tour taxi, Haram transfer, VIP taxi Saudi Arabia, family taxi Saudi, intercity taxi",
+    "taxi services Saudi Arabia, transportation service Saudi Arabia, cab service, airport taxi Jeddah, long distance taxi, Umrah taxi service, Ziyarat tour taxi, VIP taxi Saudi Arabia, family taxi van, intercity cab, transport company near me",
   alternates: { canonical: "/services" },
 };
 

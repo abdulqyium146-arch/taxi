@@ -12,11 +12,11 @@ import type { FaqItem } from "@/lib/types";
 const related = getRelatedContent("/services/vip-taxi");
 
 export const metadata: Metadata = {
-  title: "VIP Taxi Saudi Arabia – Luxury Chauffeur Service Jeddah, Makkah, Madinah",
+  title: "VIP Taxi & Corporate Cab Service – Luxury Chauffeur Saudi Arabia",
   description:
-    "VIP luxury taxi service in Saudi Arabia. Toyota Camry, Lexus ES, GMC Yukon with professional chauffeurs. Airport transfers, intercity routes, Umrah VIP packages. Book: +966573067785.",
+    "Premium VIP taxi and corporate cab service in Saudi Arabia. Private chauffeur in Lexus ES, Toyota Camry, GMC Yukon. Corporate traveller packages, airport transfers, Makkah & Madinah routes. Book: +966573067785.",
   keywords:
-    "VIP taxi Saudi Arabia, luxury taxi Jeddah, chauffeur service Makkah, VIP transfer Saudi Arabia, Lexus taxi Saudi Arabia, luxury airport transfer Jeddah",
+    "VIP taxi Saudi Arabia, corporate traveller taxi, corporate cab service, luxury taxi Jeddah, private chauffeur Saudi Arabia, rent a car with driver, vip cab service, chauffeur service Makkah, luxury airport transfer Jeddah, corporate travel Saudi Arabia",
 };
 
 const vipFaqs: FaqItem[] = [

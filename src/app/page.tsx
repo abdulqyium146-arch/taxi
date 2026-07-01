@@ -15,11 +15,11 @@ import { BUSINESS } from "@/lib/constants";
 import { Phone, MessageCircle, MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Taxi Bhai – Saudi Arabia's Most Trusted Taxi Service | 24/7 Booking",
+  title: "Taxi Service Near Me – Taxi Bhai Saudi Arabia | 24/7 Cab Booking",
   description:
-    "Taxi Bhai: Professional 24/7 taxi service in Saudi Arabia. Airport transfers from KAIA Jeddah, Umrah taxi packages, Ziyarat tours, VIP rides, and intercity taxi between Jeddah, Makkah, Madinah, Taif & Badr. Call +966573067785.",
+    "Book taxi service near you in Jeddah, Makkah, Madinah, Taif & Badr. Taxi Bhai is Saudi Arabia's trusted transport company — airport transfers, Umrah taxi, long distance cab, 24/7 cab booking. Call +966573067785.",
   keywords:
-    "taxi Saudi Arabia, Saudi taxi service, airport transfer Jeddah, Umrah taxi Saudi Arabia, Makkah taxi, Madinah taxi, Jeddah to Makkah taxi, intercity taxi Saudi Arabia, taxi near Haram, best taxi Jeddah, taxi bhai",
+    "taxi service near me, taxi near me, taxi booking, cab service, local taxi, transport company Saudi Arabia, transportation service, 24 hour taxi near me, cab near me, taxi service Saudi Arabia, airport transfer Jeddah, Umrah taxi Saudi Arabia, Makkah taxi, Madinah taxi, Jeddah to Makkah taxi, intercity taxi, taxi bhai, careem taxi alternative, bolt taxi alternative",
   openGraph: {
     title: "Taxi Bhai – Saudi Arabia's Most Trusted Taxi Service",
     description:
@@ -157,7 +157,7 @@ export default function HomePage() {
                   <tr>
                     <th className="bg-gray-900 text-white px-4 py-3 text-left">Feature</th>
                     <th className="bg-green-700 text-white px-4 py-3 text-center">Taxi Bhai</th>
-                    <th className="bg-gray-600 text-white px-4 py-3 text-center">Ride Apps</th>
+                    <th className="bg-gray-600 text-white px-4 py-3 text-center">Careem / Uber / Yango</th>
                     <th className="bg-gray-600 text-white px-4 py-3 text-center">Haramain Train</th>
                     <th className="bg-gray-600 text-white px-4 py-3 text-center">Local Bus</th>
                   </tr>
@@ -184,6 +184,78 @@ export default function HomePage() {
                 </tbody>
               </table>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-gray-50 border-y border-gray-100" id="taxi-near-me">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-3">
+            Find a Taxi Near You in Saudi Arabia
+          </h2>
+          <p className="text-gray-500 text-sm mb-8 max-w-2xl">
+            Taxi Bhai has drivers available across western Saudi Arabia. Select your city to see
+            local taxi service, routes, and pricing near you.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {[
+              {
+                city: "Jeddah",
+                slug: "jeddah",
+                desc: "Taxi service near you in Jeddah — airport pickups from KAIA (T1, T2, T3), hotel transfers, city rides, and intercity routes to Makkah, Madinah, and Taif.",
+                routes: ["Jeddah → Makkah", "Jeddah → Madinah", "Jeddah → Taif"],
+                from: "SAR 60",
+              },
+              {
+                city: "Makkah",
+                slug: "makkah",
+                desc: "Local taxi near Haram in Makkah — hotel shuttles, Haram transfer, Ziyarat tours to Cave of Hira, Mount Arafat, and Mina. Available all prayer times.",
+                routes: ["Haram Shuttle", "Ziyarat Tour", "Makkah → Madinah"],
+                from: "SAR 25",
+              },
+              {
+                city: "Madinah",
+                slug: "madinah",
+                desc: "Cab near you in Madinah — Masjid al-Nabawi transfer, Ziyarat tours (Quba, Uhud, Badr), airport taxi from Prince Mohammad bin Abdulaziz Airport.",
+                routes: ["Nabawi Shuttle", "Ziyarat Tour", "Madinah → Jeddah"],
+                from: "SAR 25",
+              },
+              {
+                city: "Taif",
+                slug: "taif",
+                desc: "Taxi service near me in Taif — city transfers, mountain route taxi to Jeddah via the Hada scenic road, and intercity cab to Makkah.",
+                routes: ["Taif → Jeddah", "Taif → Makkah", "City Transfer"],
+                from: "SAR 150",
+              },
+              {
+                city: "Badr",
+                slug: "badr",
+                desc: "Taxi near you in Badr — the historic Battle of Badr site. Day trip taxi from Madinah (155km). Local transfer service within Badr city.",
+                routes: ["Madinah → Badr", "Badr → Madinah", "Site Tour"],
+                from: "SAR 200",
+              },
+            ].map((item) => (
+              <a
+                key={item.city}
+                href={`/locations/${item.slug}`}
+                className="bg-white border border-gray-200 hover:border-green-500 rounded-2xl p-5 transition-all group"
+              >
+                <div className="flex items-center gap-2 mb-2">
+                  <MapPin className="w-4 h-4 text-green-700 flex-shrink-0" />
+                  <h3 className="font-black text-gray-900">Taxi Near Me – {item.city}</h3>
+                </div>
+                <p className="text-gray-500 text-xs leading-relaxed mb-3">{item.desc}</p>
+                <ul className="space-y-1 mb-3">
+                  {item.routes.map((r) => (
+                    <li key={r} className="text-xs text-gray-600 flex items-center gap-1.5">
+                      <span className="w-1 h-1 bg-green-500 rounded-full flex-shrink-0" />
+                      {r}
+                    </li>
+                  ))}
+                </ul>
+                <span className="text-xs font-bold text-green-700">From {item.from}</span>
+              </a>
+            ))}
           </div>
         </div>
       </section>

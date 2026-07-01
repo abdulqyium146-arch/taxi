@@ -13,11 +13,11 @@ import { MapPin, Clock, DollarSign, MessageCircle, Phone, ArrowRight } from "luc
 const related = getRelatedContent("/services/intercity-taxi");
 
 export const metadata: Metadata = {
-  title: "Saudi Intercity Taxi Service – Fixed Price City-to-City Routes",
+  title: "Long Distance Taxi Saudi Arabia – Outstation Cab | City to City Fixed Price",
   description:
-    "Fixed-price intercity taxi between Jeddah, Makkah, Madinah, Taif & Badr. Professional private cars, 24/7 availability. Jeddah→Makkah SAR 120, Jeddah→Madinah SAR 350. Book: +966573067785.",
+    "Long distance taxi and outstation cab service across Saudi Arabia. Fixed-price city-to-city private transfers — Jeddah→Makkah SAR 120, Jeddah→Madinah SAR 350. 24/7 taxi booking. Call +966573067785.",
   keywords:
-    "intercity taxi Saudi Arabia, Jeddah to Makkah taxi, Jeddah to Madinah taxi, Makkah to Madinah taxi, Saudi city to city taxi, fixed price taxi Saudi Arabia, private taxi Saudi Arabia",
+    "long distance taxi Saudi Arabia, long distance taxi service, outstation cab, outstation cabs, taxi transfers, oneway taxi, private taxi Saudi Arabia, intercity taxi Saudi Arabia, Jeddah to Makkah taxi, Makkah to Madinah taxi, taxi prices Saudi Arabia, cab service near me, transport service near me",
 };
 
 export default function IntercityTaxiPage() {
@@ -165,6 +165,62 @@ export default function IntercityTaxiPage() {
                 <li><strong>Speed limits:</strong> 120–140 km/h on major highways</li>
                 <li><strong>Toll roads:</strong> Most intercity routes are toll-free</li>
               </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Outstation / Long Distance Content Block */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-black text-gray-900 mb-4">
+            Long Distance &amp; Outstation Cab Service in Saudi Arabia
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="space-y-4 text-gray-600 text-sm leading-relaxed">
+              <p>
+                Need an <strong className="text-gray-900">outstation cab</strong> or long distance
+                taxi across Saudi Arabia&apos;s western region? Taxi Bhai specializes in
+                fixed-price, pre-booked intercity transfers — the most reliable alternative to
+                ride-hailing apps on longer routes where surge pricing makes costs unpredictable.
+              </p>
+              <p>
+                Our outstation taxi service covers all major city pairs: Jeddah to Makkah, Makkah
+                to Madinah, Jeddah to Madinah, Jeddah to Taif, and Madinah to Badr. One-way and
+                return bookings available.
+              </p>
+              <p>
+                Unlike Careem, Uber, Bolt, or Yango — which use dynamic surge pricing during
+                Hajj, Ramadan, and peak Umrah season — Taxi Bhai charges the same fixed fare
+                year-round. The price you see at booking is the price you pay.
+              </p>
+            </div>
+            <div className="space-y-3">
+              <div className="bg-blue-50 border border-blue-200 rounded-xl p-4">
+                <h3 className="font-bold text-gray-900 text-sm mb-3">Outstation Cab Booking — What to Share</h3>
+                <ul className="space-y-2 text-xs text-gray-600">
+                  {[
+                    "Your pickup city and exact address/hotel",
+                    "Destination city and drop-off address",
+                    "Travel date and preferred departure time",
+                    "Number of passengers and luggage pieces",
+                    "Economy (sedan) or VIP (Camry/Lexus) preference",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 bg-blue-500 rounded-full flex-shrink-0 mt-1.5" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="bg-green-50 border border-green-200 rounded-xl p-4">
+                <h3 className="font-bold text-gray-900 text-sm mb-2">Why Choose Private Over Bus or Train?</h3>
+                <ul className="space-y-1.5 text-xs text-gray-600">
+                  <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 bg-green-500 rounded-full flex-shrink-0 mt-1.5" />Door-to-door — no station transfers</li>
+                  <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 bg-green-500 rounded-full flex-shrink-0 mt-1.5" />Departs when you&apos;re ready</li>
+                  <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 bg-green-500 rounded-full flex-shrink-0 mt-1.5" />Luggage travels with you</li>
+                  <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 bg-green-500 rounded-full flex-shrink-0 mt-1.5" />Miqat stops on request</li>
+                  <li className="flex items-start gap-2"><span className="w-1.5 h-1.5 bg-green-500 rounded-full flex-shrink-0 mt-1.5" />Group of 4–7 is price-competitive</li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>

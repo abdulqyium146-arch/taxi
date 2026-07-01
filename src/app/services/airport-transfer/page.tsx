@@ -12,11 +12,11 @@ import { Plane, Clock, Shield, Navigation, CheckCircle, MessageCircle, Phone, Ma
 const related = getRelatedContent("/services/airport-transfer");
 
 export const metadata: Metadata = {
-  title: "Jeddah Airport Taxi & Transfer Service – KAIA Terminal 1, 2 & 3",
+  title: "Airport Taxi Service Near Me – Jeddah Airport Transfer | KAIA T1 T2 T3",
   description:
-    "Professional airport taxi service from King Abdulaziz International Airport (KAIA) Jeddah. Flight tracking, meet & greet, fixed prices to Makkah (SAR 120), Madinah (SAR 350), Taif (SAR 150). Book: +966573067785.",
+    "Book airport taxi service near you from King Abdulaziz International Airport (KAIA) Jeddah. 24/7 airport cab, flight tracking, cheap airport transfers — Makkah SAR 120, Madinah SAR 350. Pre-book: +966573067785.",
   keywords:
-    "Jeddah airport taxi, KAIA taxi, airport transfer Jeddah, King Abdulaziz Airport taxi, airport pickup Jeddah, taxi from Jeddah airport to Makkah, Jeddah airport transfer service",
+    "airport taxi near me, airport taxi service, airport cab service, airport pickup service, cheap airport transfers, book airport transfer, airport taxi booking, Jeddah airport taxi, KAIA taxi, airport transfer Jeddah, car service to airport, taxi to airport near me, airport taxi service near me, airport transfer service, airport transfers near me, cheap airport taxi",
 };
 
 const terminals = [

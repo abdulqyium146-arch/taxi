@@ -12,11 +12,11 @@ import { Moon, Clock, CheckCircle, MessageCircle, Phone, Star } from "lucide-rea
 const related = getRelatedContent("/services/umrah-taxi");
 
 export const metadata: Metadata = {
-  title: "Umrah Taxi Service Saudi Arabia – Airport to Haram Packages",
+  title: "Umrah Taxi Saudi Arabia – Private Cab with Driver | Airport to Haram",
   description:
-    "Dedicated Umrah taxi service in Saudi Arabia. Airport pickup, Miqat stops, Haram transfers, Makkah & Madinah packages. 24/7. Fixed prices. Serving pilgrims since 2019. Book: +966573067785.",
+    "Dedicated Umrah taxi with driver in Saudi Arabia. Airport pickup, Miqat stops, hotel-to-Haram cab, Makkah & Madinah packages. 24/7. Fixed prices. Serving pilgrims since 2019. Book: +966573067785.",
   keywords:
-    "Umrah taxi Saudi Arabia, Umrah transport Jeddah, taxi for Umrah, airport to Makkah Umrah, Miqat taxi stop, Umrah taxi package, taxi Umrah Jeddah Makkah Madinah",
+    "Umrah taxi Saudi Arabia, Umrah cab, rent a car with driver Jeddah, private taxi Makkah, Umrah transport service, airport to Makkah taxi, Miqat taxi stop, Umrah taxi package, taxi Umrah Jeddah Makkah Madinah, Umrah taxi near me",
 };
 
 const packages = [
